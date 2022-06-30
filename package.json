@@ -1,0 +1,30 @@
+{
+  "name": "olx_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm-run-all build_server run_server",
+    "build_server": "tsc --project tsconfig.json",
+    "run_server": "node ./bin/service",
+    "build": "npm-run-all build_server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "@types/node": "^18.0.0",
+    "@types/node-telegram-bot-api": "^0.57.1",
+    "nodemon": "^2.0.18",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "htmlparser2": "^8.0.1",
+    "https": "^1.0.0",
+    "node-telegram-bot-api": "^0.58.0",
+    "query-string": "^7.1.1"
+  }
+}

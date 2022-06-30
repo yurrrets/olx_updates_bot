@@ -1,0 +1,12 @@
+#!/usr/bin/env node -r esm
+
+process.env.NODE_ENV='production'
+process.env.NODE_PATH+=':../';
+
+var {main} = require('../dist/main')
+main()
+
+process.on("SIGTERM", () => {
+  console.log("Nodejs process received a SIGTERM signal");
+  process.exit(0)
+});
