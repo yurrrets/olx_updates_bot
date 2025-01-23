@@ -31,9 +31,12 @@ const parseOlxPage = async (olxurl: string) => {
   })
   // console.log(dom.children)
   const anchorAll = findElements(dom.children, "a")
+  // console.log(anchorAll)
   for (let anchor of anchorAll) {
-    const innerHeader6s = findElements(anchor.children, "h6")
-    const innerParagraphs = findElements(anchor.children, "p")
+    const innerHeader6s = findElements(anchor.children, "h4")
+    // console.log("innerHeader6s:", innerHeader6s)
+    const innerParagraphs = findElements(anchor.parent.parent.children, "p")
+    // console.log(innerParagraphs)
     const innerImgs = findElements(anchor.children, "img")
     if (innerHeader6s.length === 0) {
       continue
